@@ -1,0 +1,13 @@
+<p>
+  <b>Stuff that happened:</b>
+  <%=h @day.stuff_that_happened %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%=h @day.when %>
+</p>
+
+
+<%= link_to 'Edit', edit_day_path(@day) %> |
+<%= link_to 'Back', days_path %>

@@ -1,0 +1,22 @@
+<h1>Listing days</h1>
+
+<table>
+  <tr>
+    <th>Stuff that happened</th>
+    <th>When</th>
+  </tr>
+
+<% @days.each do |day| %>
+  <tr>
+    <td><%=h day.stuff_that_happened %></td>
+    <td><%=h day.when %></td>
+    <td><%= link_to 'Show', day %></td>
+    <td><%= link_to 'Edit', edit_day_path(day) %></td>
+    <td><%= link_to 'Destroy', day, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New day', new_day_path %>
